@@ -1,0 +1,1 @@
+# hero-non-responsive
