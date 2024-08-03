@@ -1,0 +1,194 @@
+/* Global Reset  */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1;
+  box-sizing: border-box;
+  color: #777;
+  padding: 1.6rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.656),
+      rgba(0, 0, 0, 0.605)
+    ),
+    url(./assets/images/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 95vh;
+  border-radius: 5px;
+  position: relative;
+}
+
+/* Nav Bar Styles */
+
+.header__navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.2rem;
+}
+
+.header__navbar--img-box {
+  height: 7.2rem;
+  width: 7.2rem;
+}
+
+.logo-image {
+  width: 100%;
+}
+
+.header__navbar--list {
+  list-style: none;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  display: flex;
+  gap: 1.6rem;
+}
+
+.nav--link:link,
+.nav--link:visited {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.1s;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.nav--link:hover {
+  color: #fff;
+  text-shadow: 0 0.3rem 0.3rem rgba(255, 255, 255);
+  transform: translateY(-0.2rem);
+}
+
+.nav--link:active {
+  text-shadow: 0 0 0.2rem rgba(255, 255, 255);
+  transform: translateY(0);
+}
+
+/* Header Main Text section */
+
+.header__text-box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4.8rem;
+  box-shadow: inset 0 0 0 0.3rem #f8f9fa;
+  padding: 3.2rem;
+}
+
+.heading-primary {
+  text-align: center;
+  line-height: 1.1;
+}
+
+.heading-primary--main {
+  font-size: 12rem;
+  color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 2rem;
+  display: inline-block;
+  animation: moveinleft 1.5s ease-out;
+  backface-visibility: hidden;
+  background-image: linear-gradient(to right, #3f78fb, #fff);
+  -webkit-background-clip: text;
+}
+
+.heading-primary--sub {
+  font-size: 2rem;
+  color: #f8f9fa;
+  text-transform: uppercase;
+  display: block;
+  animation: moveinright 1.5s ease-out;
+  letter-spacing: 0.8rem;
+}
+
+.header__link-box {
+  width: 20rem;
+}
+
+.text-box__btn:link,
+.text-box__btn:visited {
+  text-align: center;
+  border-radius: 100px;
+  text-transform: uppercase;
+  color: #f8f9fa;
+  display: inline-block;
+  padding: 1.6rem 3.2rem;
+  background-color: #f8f9fa;
+  text-decoration: none;
+  width: 100%;
+  transition: all 0.4s;
+  animation: moveinbottom 1s ease-out 0.6s;
+  animation-fill-mode: backwards;
+  background-image: url(./assets/images/water.gif);
+  background-position: center;
+  background-size: cover;
+  font-weight: 700;
+}
+
+.text-box__btn:hover {
+  color: #343a40;
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0.5rem 0.1rem rgba(63, 119, 251, 0.379);
+
+  color: #f8f9fa;
+}
+
+.text-box__btn:active {
+  transform: translateY(0);
+  box-shadow: 0 0rem 0rem rgba(63, 120, 251, 0.581);
+}
+
+@keyframes moveinleft {
+  0% {
+    opacity: 0;
+    transform: translateX(-3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveinright {
+  0% {
+    opacity: 0;
+    transform: translateX(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveinbottom {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
